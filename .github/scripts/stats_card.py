@@ -40,10 +40,21 @@ QUERY = """
       totalIssueContributions
       totalRepositoriesWithContributedCommits
     }
-    repositories(first: 100, ownerAffiliations: OWNER, isFork: false) {
+    # Estrelas: so o que e seu mesmo. Repo da organizacao nao entra, as
+    # estrelas dele nao sao suas.
+    proprios: repositories(first: 100, ownerAffiliations: OWNER, isFork: false) {
       totalCount
+      nodes { stargazerCount }
+    }
+    # Linguagens: aqui a org ENTRA. O trabalho profissional vive em
+    # tecnosuporte/*, e sem isso o card mede so os projetos de estudo
+    # antigos e mostra um stack que nao e o seu.
+    paraLinguagem: repositories(
+      first: 100
+      ownerAffiliations: [OWNER, ORGANIZATION_MEMBER]
+      isFork: false
+    ) {
       nodes {
-        stargazerCount
         languages(first: 10, orderBy: { field: SIZE, direction: DESC }) {
           edges { size node { name color } }
         }
@@ -89,7 +100,7 @@ def card_stats(user, usuario, destino):
     # restrictedContributionsCount = commits em repo privado; so vem
     # preenchido quando o token tem escopo para enxergar
     commits = c["totalCommitContributions"] + c["restrictedContributionsCount"]
-    estrelas = sum(r["stargazerCount"] for r in user["repositories"]["nodes"])
+    estrelas = sum(r["stargazerCount"] for r in user["proprios"]["nodes"])
 
     linhas = [
         ("Commits no ano", num(commits)),
@@ -124,7 +135,7 @@ def card_langs(user, destino, quantidade=8):
     """Barra empilhada com as linguagens mais usadas, por bytes de codigo."""
     total_por_lang = {}
     cores = {}
-    for repo in user["repositories"]["nodes"]:
+    for repo in user["paraLinguagem"]["nodes"]:
         for e in repo["languages"]["edges"]:
             nome = e["node"]["name"]
             total_por_lang[nome] = total_por_lang.get(nome, 0) + e["size"]
