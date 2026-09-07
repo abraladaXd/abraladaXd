@@ -109,28 +109,27 @@ Do lado do código, trabalho com TypeScript e Next.js nos sistemas de cliente, F
 ### 📊 Estatísticas
 
 <!--
-  ATENCAO - leia antes de mexer nos dois cards abaixo.
+  Os dois cards abaixo sao gerados em casa pelo workflow
+  .github/workflows/stats.yml (script em .github/scripts/stats_card.py) e
+  publicados na branch "output", igual a cobrinha e ao grafico de atividade.
+  Nao dependem de servico de terceiro.
 
-  Eles apontam para github-readme-stats.vercel.app, que e a instancia
-  PUBLICA do projeto. Ela vive estourando a cota do Vercel e responde 429
-  com alguma frequencia; quando isso acontece o card aparece quebrado no
-  perfil por algumas horas e depois volta sozinho.
+  Por que nao o github-readme-stats.vercel.app: a instancia publica vive
+  respondendo 503/429 por estourar a cota do Vercel (checado em 07/09/2026,
+  503 em cinco tentativas seguidas). A saida usual e manter um fork proprio
+  hospedado no Vercel, o que troca a dependencia por outra conta para cuidar.
 
-  Para nao depender disso, o caminho e subir um fork proprio (foi o que o
-  Vitor fez):
-    1. fork de github.com/anuraghazra/github-readme-stats
-    2. importar o fork no vercel.com como projeto novo
-    3. criar um Personal Access Token classico, so com escopo "repo"
-    4. no painel do Vercel, cadastrar o token na env var PAT_1
-    5. trocar o host das duas URLs abaixo pelo dominio do seu deploy
+  NUMEROS BAIXOS? Duas causas, nesta ordem:
+    1. Settings > Public profile > marcar "Include private contributions on
+       my profile". Sem isso o trabalho em repo privado nao entra em nenhum
+       dos tres SVGs deste perfil.
+    2. Criar um PAT classico com escopo "repo" + "read:user" e salvar como
+       secret STATS_TOKEN. O GITHUB_TOKEN padrao do Actions nao enxerga
+       contribuicao privada, entao os cards saem subestimados sem ele.
+  Depois dos dois: aba Actions > "Gera os cards de estatistica" > Run workflow.
 
-  NAO apontar para a instancia do Vitor
-  (github-readme-stats-vitorrfl1.vercel.app): o deploy e dele e cada
-  request sai da cota do Vercel dele.
-
-  Paleta tokyo night, escrita na mao por query string. As mesmas cores
-  estao no topo de .github/scripts/activity_graph.py e nos parametros da
-  cobrinha em .github/workflows/snake.yml - mudou aqui, muda nos tres.
+  Paleta tokyo night, escrita na mao no topo dos dois scripts em
+  .github/scripts/ e nos parametros da cobrinha em snake.yml.
     fundo   1a1b26      destaque  7aa2f7
     texto   c0caf5      linha     7dcfff
 -->
@@ -139,12 +138,12 @@ Do lado do código, trabalho com TypeScript e Next.js nos sistemas de cliente, F
   <img
     height="195"
     alt="Estatísticas do GitHub de Abraão Cardoso"
-    src="https://github-readme-stats.vercel.app/api?username=abraladaXd&show_icons=true&locale=pt-br&count_private=true&hide_border=true&bg_color=1a1b26&title_color=7aa2f7&text_color=c0caf5&icon_color=7dcfff"
+    src="https://raw.githubusercontent.com/abraladaXd/abraladaXd/output/stats.svg"
   />
   <img
     height="195"
     alt="Linguagens mais usadas"
-    src="https://github-readme-stats.vercel.app/api/top-langs/?username=abraladaXd&layout=compact&custom_title=Tecnologias&langs_count=8&hide_border=true&bg_color=1a1b26&title_color=7aa2f7&text_color=c0caf5"
+    src="https://raw.githubusercontent.com/abraladaXd/abraladaXd/output/top-langs.svg"
   />
 </p>
 
