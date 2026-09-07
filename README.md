@@ -1,10 +1,10 @@
 # 🛠️ Abraão Cardoso
 
-**`Co-fundador da Tecnosup`** &nbsp;·&nbsp; **`Desenvolvedor`** &nbsp;·&nbsp; **`Infraestrutura & TI`**
+**`Co-fundador da Tecnosup`** &nbsp;·&nbsp; **`Desenvolvedor`** &nbsp;·&nbsp; **`Landing pages`** &nbsp;·&nbsp; **`Infra & TI`**
 
 Ajudei a fundar a Tecnosup e cuido da parte que faz um projeto sair da máquina do desenvolvedor e virar sistema no ar. Orquestro a infraestrutura da maior parte dos projetos de cliente: ambiente de homologação separado do de produção, variáveis e segredos no lugar certo, domínio, deploy e a manutenção que segura tudo em pé depois da entrega.
 
-Do lado do código, trabalho com TypeScript e Next.js nos sistemas de cliente, Firebase e Vercel como base de dados e publicação, e Python para automação interna e agentes. Do lado de TI, resolvo o que chega pelo balcão: Windows, hardware, recuperação de mídia e otimização de máquina.
+Do lado do código, trabalho com TypeScript e Next.js nos sistemas de cliente, Firebase e Vercel como base de dados e publicação, e Python para automação interna e agentes. Na maior parte dos projetos sou eu quem lidera a criação da landing page — a peça que o cliente vê primeiro e a que precisa vender. Do lado de TI, resolvo o que chega pelo balcão: Windows, hardware, recuperação de mídia e otimização de máquina.
 
 > [!IMPORTANT]
 > **O que está público aqui não é o que eu faço hoje.** Os repositórios listados abaixo são de estudo e de projetos antigos. A infraestrutura e os sistemas de cliente que eu mantenho vivem em repositório privado, na organização da Tecnosup. Se quiser ver código ou conversar sobre um projeto, é só chamar.
