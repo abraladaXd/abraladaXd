@@ -143,6 +143,9 @@ def card_langs(user, destino, quantidade=8):
 
     ranking = sorted(total_por_lang.items(), key=lambda kv: kv[1], reverse=True)[:quantidade]
     total = sum(v for _, v in ranking) or 1
+    # Tira o que arredonda para 0.0%: linguagem com meia duzia de linhas
+    # aparecia na legenda zerada, o que so suja o card.
+    ranking = [(n, t) for n, t in ranking if 100 * t / total >= 0.05]
 
     W, H = 340, 195
     BARRA_X, BARRA_Y, BARRA_W, BARRA_H = 25, 55, W - 50, 10
