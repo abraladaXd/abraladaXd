@@ -1,8 +1,8 @@
 # 🛠️ Abraão Cardoso
 
-**`Desenvolvedor`** &nbsp;·&nbsp; **`Infraestrutura & TI`** &nbsp;·&nbsp; **`Tecnosup`**
+**`Co-fundador da Tecnosup`** &nbsp;·&nbsp; **`Desenvolvedor`** &nbsp;·&nbsp; **`Infraestrutura & TI`**
 
-Cuido da parte que faz um projeto sair da máquina do desenvolvedor e virar sistema no ar. Na Tecnosup, orquestro a infraestrutura da maior parte dos projetos de cliente: ambiente de homologação separado do de produção, variáveis e segredos no lugar certo, domínio, deploy e a manutenção que segura tudo em pé depois da entrega.
+Ajudei a fundar a Tecnosup e cuido da parte que faz um projeto sair da máquina do desenvolvedor e virar sistema no ar. Orquestro a infraestrutura da maior parte dos projetos de cliente: ambiente de homologação separado do de produção, variáveis e segredos no lugar certo, domínio, deploy e a manutenção que segura tudo em pé depois da entrega.
 
 Do lado do código, trabalho com TypeScript e Next.js nos sistemas de cliente, Firebase e Vercel como base de dados e publicação, e Python para automação interna e agentes. Do lado de TI, resolvo o que chega pelo balcão: Windows, hardware, recuperação de mídia e otimização de máquina.
 
