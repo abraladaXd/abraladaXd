@@ -110,7 +110,7 @@ Do lado do código, trabalho com TypeScript e Next.js nos sistemas de cliente, F
 
 <!--
   Os dois cards abaixo sao gerados em casa pelo workflow
-  .github/workflows/stats.yml (script em .github/scripts/stats_card.py) e
+  .github/workflows/assets.yml (script em .github/scripts/stats_card.py) e
   publicados na branch "output", igual a cobrinha e ao grafico de atividade.
   Nao dependem de servico de terceiro.
 
@@ -126,10 +126,10 @@ Do lado do código, trabalho com TypeScript e Next.js nos sistemas de cliente, F
     2. Criar um PAT classico com escopo "repo" + "read:user" e salvar como
        secret STATS_TOKEN. O GITHUB_TOKEN padrao do Actions nao enxerga
        contribuicao privada, entao os cards saem subestimados sem ele.
-  Depois dos dois: aba Actions > "Gera os cards de estatistica" > Run workflow.
+  Depois dos dois: aba Actions > "Gera os SVGs do perfil" > Run workflow.
 
   Paleta tokyo night, escrita na mao no topo dos dois scripts em
-  .github/scripts/ e nos parametros da cobrinha em snake.yml.
+  .github/scripts/ e nos parametros da cobrinha em assets.yml.
     fundo   1a1b26      destaque  7aa2f7
     texto   c0caf5      linha     7dcfff
 -->
@@ -148,10 +148,8 @@ Do lado do código, trabalho com TypeScript e Next.js nos sistemas de cliente, F
 </p>
 
 <!--
-  O grafico de atividade e gerado pelo workflow .github/workflows/activity-graph.yml
-  (script em .github/scripts/activity_graph.py) e publicado na branch "output".
-  Nao depende de servico de terceiro. Para rodar na mao:
-  aba Actions > "Gera o grafico de atividade" > Run workflow.
+  Gerado pelo mesmo workflow .github/workflows/assets.yml, pelo script
+  .github/scripts/activity_graph.py. Nao depende de servico de terceiro.
 
   A imagem so aparece depois que o workflow rodar pela primeira vez.
 -->
@@ -165,9 +163,8 @@ Do lado do código, trabalho com TypeScript e Next.js nos sistemas de cliente, F
 </p>
 
 <!--
-  A cobrinha e gerada pelo workflow .github/workflows/snake.yml, que publica
-  os SVGs na mesma branch "output". Para rodar na mao:
-  aba Actions > "Gera a animacao da cobrinha" > Run workflow.
+  A cobrinha vem da action Platane/snk, chamada pelo mesmo workflow
+  .github/workflows/assets.yml, e e publicada na mesma branch "output".
 -->
 
 <p align="center">

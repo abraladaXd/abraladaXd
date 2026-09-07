@@ -1,0 +1,96 @@
+name: Gera os SVGs do perfil
+
+# Gera os quatro SVGs do README (cobrinha clara e escura, grafico de
+# atividade e os dois cards de estatistica) e publica todos de uma vez na
+# branch "output". O README aponta para os arquivos dessa branch, entao o
+# perfil nao depende de nenhum servico de terceiro ficar no ar.
+#
+# POR QUE UM WORKFLOW SO, e nao um para cada SVG:
+# a action de publicacao troca a branch "output" inteira pelo conteudo de
+# dist/. Com workflows separados disparando no mesmo push, cada um buscava a
+# branch antes de o outro terminar e publicava por cima, apagando o arquivo
+# do vizinho. Aconteceu de verdade: os tres jobs terminaram "success" e
+# mesmo assim stats.svg e top-langs.svg sumiram da branch. Juntar tudo num
+# job so resolve a corrida na origem e ainda dispensa a gambiarra de
+# reconstruir os arquivos dos outros antes de publicar.
+
+on:
+  schedule:
+    # todo dia as 03:00 UTC (meia-noite em Brasilia)
+    - cron: "0 3 * * *"
+  # permite rodar na mao pelo botao "Run workflow"
+  workflow_dispatch:
+  # regera sempre que o README ou os scripts mudarem
+  push:
+    branches:
+      - main
+
+# trava extra: se dois disparos se cruzarem (push junto do agendamento),
+# o segundo espera o primeiro terminar em vez de publicar por cima
+concurrency:
+  group: publica-branch-output
+  cancel-in-progress: false
+
+jobs:
+  gerar:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Cobrinha
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          # Cores escritas na mao para casar com a paleta tokyo night dos
+          # outros SVGs. color_dots vai do quadradinho vazio ao de maior
+          # atividade.
+          outputs: |
+            dist/snake.svg?color_snake=%23bb9af7&color_dots=%23e6e9f0,%23b4c4f0,%237aa2f7,%235a7fd0,%233d5aa8
+            dist/snake-dark.svg?color_snake=%23bb9af7&color_dots=%231a1b26,%23283457,%233d59a1,%237aa2f7,%237dcfff
+
+      - name: Devolve a posse de dist/
+        # o Platane/snk roda em Docker como root e deixa dist/ pertencendo a
+        # ele; sem isto os passos de Python nao conseguem escrever na pasta
+        run: sudo chown -R "$(id -u):$(id -g)" dist
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Grafico de atividade
+        env:
+          # o token padrao do Actions ja le contribuicoes publicas
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python .github/scripts/activity_graph.py \
+            "${{ github.repository_owner }}" dist/activity-graph.svg
+
+      - name: Cards de estatistica
+        env:
+          # O GITHUB_TOKEN padrao do Actions so enxerga contribuicao publica,
+          # entao os numeros saem subestimados. Para contar tambem o trabalho
+          # em repositorio privado, criar um Personal Access Token classico
+          # com escopo "repo" + "read:user" e salvar como secret STATS_TOKEN;
+          # a linha abaixo o usa sempre que ele existir.
+          GITHUB_TOKEN: ${{ secrets.STATS_TOKEN || secrets.GITHUB_TOKEN }}
+        run: |
+          python .github/scripts/stats_card.py \
+            "${{ github.repository_owner }}" dist/stats.svg dist/top-langs.svg
+
+      - name: Confere que os quatro sairam
+        run: |
+          ls -la dist/
+          for f in snake.svg snake-dark.svg activity-graph.svg stats.svg top-langs.svg; do
+            [ -s "dist/$f" ] || { echo "faltou dist/$f"; exit 1; }
+          done
+
+      - name: Publica na branch output
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
