@@ -1,0 +1,60 @@
+name: Gera a animacao da cobrinha
+
+# Le o grafico de contribuicao do perfil, gera os SVGs da cobrinha e publica
+# na branch "output". O README aponta para os arquivos dessa branch, entao
+# nada aqui depende de servico de terceiro ficar no ar.
+#
+# Estrutura adaptada de github.com/vitorrfl/vitorrfl.
+
+on:
+  schedule:
+    # todo dia as 03:00 UTC (meia-noite em Brasilia)
+    - cron: "0 3 * * *"
+  # permite rodar na mao pelo botao "Run workflow"
+  workflow_dispatch:
+  # regera sempre que o README mudar
+  push:
+    branches:
+      - main
+
+jobs:
+  gerar:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Gera os SVGs
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          # Cores escritas na mao para casar com a paleta tokyo night usada
+          # nos cards de estatistica do README e no grafico de atividade.
+          # color_dots vai do quadradinho vazio ao de maior atividade.
+          outputs: |
+            dist/snake.svg?color_snake=%23bb9af7&color_dots=%23e6e9f0,%23b4c4f0,%237aa2f7,%235a7fd0,%233d5aa8
+            dist/snake-dark.svg?color_snake=%23bb9af7&color_dots=%231a1b26,%23283457,%233d59a1,%237aa2f7,%237dcfff
+
+      # A action de publicacao troca a branch "output" inteira pelo conteudo
+      # de dist/. Como o workflow do grafico de atividade publica na mesma
+      # branch, sem este passo um apagaria o arquivo do outro.
+      - name: Preserva o grafico de atividade
+        run: |
+          # o Platane/snk roda em Docker como root e deixa dist/ pertencendo
+          # a ele; sem isto o passo nao consegue escrever na pasta
+          sudo chown -R "$(id -u):$(id -g)" dist
+          git fetch origin output --depth 1 || exit 0
+          for f in $(git ls-tree --name-only origin/output); do
+            [ -e "dist/$f" ] || git show "origin/output:$f" > "dist/$f"
+          done
+          ls -la dist/
+
+      - name: Publica na branch output
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
