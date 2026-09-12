@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="195" viewBox="0 0 340 195" font-family="Segoe UI, Ubuntu, sans-serif" role="img" aria-label="Linguagens mais usadas">
+<rect width="340" height="195" rx="16" fill="#1a1b26"/>
+<text x="25" y="35" fill="#7aa2f7" font-size="16" font-weight="600">Tecnologias</text>
+<clipPath id="barra"><rect x="25" y="55" width="290" height="10" rx="5"/></clipPath>
+<g clip-path="url(#barra)">
+<rect x="25.00" y="55" width="219.84" height="10" fill="#3178c6"/>
+<rect x="244.84" y="55" width="32.57" height="10" fill="#e34c26"/>
+<rect x="277.42" y="55" width="27.17" height="10" fill="#f1e05a"/>
+<rect x="304.59" y="55" width="8.33" height="10" fill="#663399"/>
+<rect x="312.92" y="55" width="1.17" height="10" fill="#012456"/>
+<rect x="314.08" y="55" width="0.89" height="10" fill="#3572A5"/>
+</g>
+<circle cx="30" cy="91" r="5" fill="#3178c6"/>
+<text x="43" y="95" fill="#c0caf5" font-size="12">TypeScript <tspan fill="#565f89">75.8%</tspan></text>
+<circle cx="185" cy="91" r="5" fill="#e34c26"/>
+<text x="198" y="95" fill="#c0caf5" font-size="12">HTML <tspan fill="#565f89">11.2%</tspan></text>
+<circle cx="30" cy="115" r="5" fill="#f1e05a"/>
+<text x="43" y="119" fill="#c0caf5" font-size="12">JavaScript <tspan fill="#565f89">9.4%</tspan></text>
+<circle cx="185" cy="115" r="5" fill="#663399"/>
+<text x="198" y="119" fill="#c0caf5" font-size="12">CSS <tspan fill="#565f89">2.9%</tspan></text>
+<circle cx="30" cy="139" r="5" fill="#012456"/>
+<text x="43" y="143" fill="#c0caf5" font-size="12">PowerShell <tspan fill="#565f89">0.4%</tspan></text>
+<circle cx="185" cy="139" r="5" fill="#3572A5"/>
+<text x="198" y="143" fill="#c0caf5" font-size="12">Python <tspan fill="#565f89">0.3%</tspan></text>
+</svg>

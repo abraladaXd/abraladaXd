@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="195" viewBox="0 0 480 195" font-family="Segoe UI, Ubuntu, sans-serif" role="img" aria-label="Estatísticas de Abraão Cardoso no GitHub">
+<rect width="480" height="195" rx="16" fill="#1a1b26"/>
+<text x="25" y="35" fill="#7aa2f7" font-size="16" font-weight="600">Estatísticas de Abraão Cardoso</text>
+<text x="25" y="68" fill="#c0caf5" font-size="13">Commits no ano</text>
+<text x="455" y="68" fill="#7dcfff" font-size="13" font-weight="700" text-anchor="end">508</text>
+<text x="25" y="89" fill="#c0caf5" font-size="13">Pull requests</text>
+<text x="455" y="89" fill="#7dcfff" font-size="13" font-weight="700" text-anchor="end">28</text>
+<text x="25" y="110" fill="#c0caf5" font-size="13">Issues</text>
+<text x="455" y="110" fill="#7dcfff" font-size="13" font-weight="700" text-anchor="end">17</text>
+<text x="25" y="131" fill="#c0caf5" font-size="13">Repositórios com contribuição</text>
+<text x="455" y="131" fill="#7dcfff" font-size="13" font-weight="700" text-anchor="end">11</text>
+<text x="25" y="152" fill="#c0caf5" font-size="13">Estrelas recebidas</text>
+<text x="455" y="152" fill="#7dcfff" font-size="13" font-weight="700" text-anchor="end">2</text>
+<text x="25" y="173" fill="#c0caf5" font-size="13">Seguidores</text>
+<text x="455" y="173" fill="#7dcfff" font-size="13" font-weight="700" text-anchor="end">2</text>
+</svg>
