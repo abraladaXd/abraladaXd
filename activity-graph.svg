@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="300" viewBox="0 0 1000 300" font-family="Segoe UI, Ubuntu, sans-serif">
+<defs><linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7dcfff" stop-opacity="0.55"/><stop offset="100%" stop-color="#7dcfff" stop-opacity="0.02"/></linearGradient></defs>
+<rect width="1000" height="300" rx="16" fill="#1a1b26"/>
+<text x="60" y="38" fill="#7aa2f7" font-size="20" font-weight="600">Gráfico de atividade — últimos 30 dias</text>
+<text x="60" y="58" fill="#c0caf5" font-size="13" opacity="0.75">abraladaXd · 440 contribuições no período</text>
+<line x1="60" y1="70.0" x2="970" y2="70.0" stroke="#c0caf5" stroke-opacity="0.12" stroke-width="1"/>
+<text x="48" y="74.0" fill="#c0caf5" font-size="11" opacity="0.6" text-anchor="end">84</text>
+<line x1="60" y1="113.8" x2="970" y2="113.8" stroke="#c0caf5" stroke-opacity="0.12" stroke-width="1"/>
+<text x="48" y="117.8" fill="#c0caf5" font-size="11" opacity="0.6" text-anchor="end">63</text>
+<line x1="60" y1="157.5" x2="970" y2="157.5" stroke="#c0caf5" stroke-opacity="0.12" stroke-width="1"/>
+<text x="48" y="161.5" fill="#c0caf5" font-size="11" opacity="0.6" text-anchor="end">42</text>
+<line x1="60" y1="201.2" x2="970" y2="201.2" stroke="#c0caf5" stroke-opacity="0.12" stroke-width="1"/>
+<text x="48" y="205.2" fill="#c0caf5" font-size="11" opacity="0.6" text-anchor="end">21</text>
+<line x1="60" y1="245.0" x2="970" y2="245.0" stroke="#c0caf5" stroke-opacity="0.12" stroke-width="1"/>
+<text x="48" y="249.0" fill="#c0caf5" font-size="11" opacity="0.6" text-anchor="end">0</text>
+<path d="M 60.0 245.0 C 65.2 245.0, 80.9 245.0, 91.4 245.0 C 101.8 245.0, 112.3 245.0, 122.8 245.0 C 133.2 245.0, 143.7 245.0, 154.1 245.0 C 164.6 240.8, 175.1 223.1, 185.5 220.0 C 196.0 216.9, 206.4 222.4, 216.9 226.2 C 227.4 230.1, 237.8 239.8, 248.3 242.9 C 258.7 245.0, 269.2 244.7, 279.7 245.0 C 290.1 245.0, 300.6 245.0, 311.0 245.0 C 321.5 245.0, 332.0 245.0, 342.4 245.0 C 352.9 240.8, 363.3 221.4, 373.8 220.0 C 384.3 218.6, 394.7 232.5, 405.2 236.7 C 415.6 240.8, 426.1 243.6, 436.6 245.0 C 447.0 245.0, 457.5 245.0, 467.9 245.0 C 478.4 245.0, 488.9 245.0, 499.3 245.0 C 509.8 243.6, 520.2 236.7, 530.7 236.7 C 541.1 236.7, 551.6 245.0, 562.1 245.0 C 572.5 223.5, 583.0 122.4, 593.4 107.5 C 603.9 92.6, 614.4 135.6, 624.8 155.4 C 635.3 175.2, 645.7 237.4, 656.2 226.2 C 666.7 215.1, 677.1 113.8, 687.6 88.8 C 698.0 63.8, 708.5 63.1, 719.0 76.2 C 729.4 89.4, 739.9 140.1, 750.3 167.9 C 760.8 195.7, 771.3 244.7, 781.7 242.9 C 792.2 241.2, 802.6 164.4, 813.1 157.5 C 823.6 150.6, 834.0 189.4, 844.5 201.2 C 854.9 213.1, 865.4 221.7, 875.9 228.3 C 886.3 234.9, 896.8 242.6, 907.2 240.8 C 917.7 239.1, 928.2 217.2, 938.6 217.9 C 949.1 218.6, 964.8 240.5, 970.0 245.0 L 970.0 245 L 60.0 245 Z" fill="url(#area)"/>
+<path d="M 60.0 245.0 C 65.2 245.0, 80.9 245.0, 91.4 245.0 C 101.8 245.0, 112.3 245.0, 122.8 245.0 C 133.2 245.0, 143.7 245.0, 154.1 245.0 C 164.6 240.8, 175.1 223.1, 185.5 220.0 C 196.0 216.9, 206.4 222.4, 216.9 226.2 C 227.4 230.1, 237.8 239.8, 248.3 242.9 C 258.7 245.0, 269.2 244.7, 279.7 245.0 C 290.1 245.0, 300.6 245.0, 311.0 245.0 C 321.5 245.0, 332.0 245.0, 342.4 245.0 C 352.9 240.8, 363.3 221.4, 373.8 220.0 C 384.3 218.6, 394.7 232.5, 405.2 236.7 C 415.6 240.8, 426.1 243.6, 436.6 245.0 C 447.0 245.0, 457.5 245.0, 467.9 245.0 C 478.4 245.0, 488.9 245.0, 499.3 245.0 C 509.8 243.6, 520.2 236.7, 530.7 236.7 C 541.1 236.7, 551.6 245.0, 562.1 245.0 C 572.5 223.5, 583.0 122.4, 593.4 107.5 C 603.9 92.6, 614.4 135.6, 624.8 155.4 C 635.3 175.2, 645.7 237.4, 656.2 226.2 C 666.7 215.1, 677.1 113.8, 687.6 88.8 C 698.0 63.8, 708.5 63.1, 719.0 76.2 C 729.4 89.4, 739.9 140.1, 750.3 167.9 C 760.8 195.7, 771.3 244.7, 781.7 242.9 C 792.2 241.2, 802.6 164.4, 813.1 157.5 C 823.6 150.6, 834.0 189.4, 844.5 201.2 C 854.9 213.1, 865.4 221.7, 875.9 228.3 C 886.3 234.9, 896.8 242.6, 907.2 240.8 C 917.7 239.1, 928.2 217.2, 938.6 217.9 C 949.1 218.6, 964.8 240.5, 970.0 245.0" fill="none" stroke="#7dcfff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="185.5" cy="220.0" r="3.5" fill="#bb9af7" stroke="#1a1b26" stroke-width="1.5"/>
+<circle cx="216.9" cy="226.2" r="3.5" fill="#bb9af7" stroke="#1a1b26" stroke-width="1.5"/>
+<circle cx="248.3" cy="242.9" r="3.5" fill="#bb9af7" stroke="#1a1b26" stroke-width="1.5"/>
+<circle cx="373.8" cy="220.0" r="3.5" fill="#bb9af7" stroke="#1a1b26" stroke-width="1.5"/>
+<circle cx="405.2" cy="236.7" r="3.5" fill="#bb9af7" stroke="#1a1b26" stroke-width="1.5"/>
+<circle cx="530.7" cy="236.7" r="3.5" fill="#bb9af7" stroke="#1a1b26" stroke-width="1.5"/>
+<circle cx="593.4" cy="107.5" r="3.5" fill="#bb9af7" stroke="#1a1b26" stroke-width="1.5"/>
+<circle cx="624.8" cy="155.4" r="3.5" fill="#bb9af7" stroke="#1a1b26" stroke-width="1.5"/>
+<circle cx="656.2" cy="226.2" r="3.5" fill="#bb9af7" stroke="#1a1b26" stroke-width="1.5"/>
+<circle cx="687.6" cy="88.8" r="3.5" fill="#bb9af7" stroke="#1a1b26" stroke-width="1.5"/>
+<circle cx="719.0" cy="76.2" r="3.5" fill="#bb9af7" stroke="#1a1b26" stroke-width="1.5"/>
+<circle cx="750.3" cy="167.9" r="3.5" fill="#bb9af7" stroke="#1a1b26" stroke-width="1.5"/>
+<circle cx="781.7" cy="242.9" r="3.5" fill="#bb9af7" stroke="#1a1b26" stroke-width="1.5"/>
+<circle cx="813.1" cy="157.5" r="3.5" fill="#bb9af7" stroke="#1a1b26" stroke-width="1.5"/>
+<circle cx="844.5" cy="201.2" r="3.5" fill="#bb9af7" stroke="#1a1b26" stroke-width="1.5"/>
+<circle cx="875.9" cy="228.3" r="3.5" fill="#bb9af7" stroke="#1a1b26" stroke-width="1.5"/>
+<circle cx="907.2" cy="240.8" r="3.5" fill="#bb9af7" stroke="#1a1b26" stroke-width="1.5"/>
+<circle cx="938.6" cy="217.9" r="3.5" fill="#bb9af7" stroke="#1a1b26" stroke-width="1.5"/>
+<text x="60.0" y="269" fill="#c0caf5" font-size="11" opacity="0.6" text-anchor="middle">9 out</text>
+<text x="154.1" y="269" fill="#c0caf5" font-size="11" opacity="0.6" text-anchor="middle">12 out</text>
+<text x="248.3" y="269" fill="#c0caf5" font-size="11" opacity="0.6" text-anchor="middle">15 out</text>
+<text x="342.4" y="269" fill="#c0caf5" font-size="11" opacity="0.6" text-anchor="middle">18 out</text>
+<text x="436.6" y="269" fill="#c0caf5" font-size="11" opacity="0.6" text-anchor="middle">21 out</text>
+<text x="530.7" y="269" fill="#c0caf5" font-size="11" opacity="0.6" text-anchor="middle">24 out</text>
+<text x="624.8" y="269" fill="#c0caf5" font-size="11" opacity="0.6" text-anchor="middle">27 out</text>
+<text x="719.0" y="269" fill="#c0caf5" font-size="11" opacity="0.6" text-anchor="middle">30 out</text>
+<text x="813.1" y="269" fill="#c0caf5" font-size="11" opacity="0.6" text-anchor="middle">2 nov</text>
+<text x="907.2" y="269" fill="#c0caf5" font-size="11" opacity="0.6" text-anchor="middle">5 nov</text>
+<text x="970.0" y="269" fill="#c0caf5" font-size="11" opacity="0.6" text-anchor="middle">7 nov</text>
+</svg>
